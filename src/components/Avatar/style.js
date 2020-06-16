@@ -1,11 +1,11 @@
 import styled, { css } from 'styled-components'
 
-const circleMixinFunc = (color) => css`
+const circleMixinFunc = (color, size = '8px') => css`
   content: '';
   display: block;
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: ${({ size }) => size};
+  height: ${({ size }) => size};
   background-color: ${color};
   border-radius: 50%;
 `
@@ -21,17 +21,23 @@ const StatusIcon = styled.div`
   left: 2px;
   top: 4px;
   &::before {
-    ${circleMixinFunc('#fff')}
+    ${({ size }) => circleMixinFunc('#fff', size)}
     transform: scale(2);
   }
   &::after {
-    ${({ theme }) => circleMixinFunc(theme.green)}
+    ${({ theme, status, size }) => {
+      if (status === 'online') {
+        return circleMixinFunc(theme.green, size)
+      } else if (status === 'offline') {
+        return circleMixinFunc(theme.gray, size)
+      }
+    }}
   }
 `
 
 const AvatarClip = styled.div`
-  width: 48px;
-  height: 48px;
+  width: ${({ size }) => size};
+  height: ${({ size }) => size};
   border-radius: 50%;
   overflow: hidden;
 `
