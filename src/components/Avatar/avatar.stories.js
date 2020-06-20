@@ -1,7 +1,7 @@
 import React from 'react'
 import Avatar from './index'
-import '../../story.css'
-import face1 from '../../assets/images/face-male-1.jpg'
+import 'story.css'
+import face1 from 'assets/images/face-male-1.jpg'
 
 export default {
   title: 'Avatar-头像组件',
