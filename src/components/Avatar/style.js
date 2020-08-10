@@ -1,13 +1,10 @@
 import styled, { css } from 'styled-components'
-
+import { circle } from 'utils/mixins'
 const circleMixinFunc = (color, size = '8px') => css`
   content: '';
   display: block;
   position: absolute;
-  width: ${({ size }) => size};
-  height: ${({ size }) => size};
-  background-color: ${color};
-  border-radius: 50%;
+  ${circle(color, size)}
 `
 
 // 最外层div
