@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import StyledBadge from './style'
+import StyledBadge, { Count } from './style'
 
 function Badge({
   children,
@@ -17,7 +17,7 @@ function Badge({
       showZero={showZero}
       {...rest}
     >
-      {children || count}
+      {children || <Count>{count}</Count>}
     </StyledBadge>
   )
 }

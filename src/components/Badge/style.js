@@ -37,7 +37,7 @@ const Count = styled.div`
 
 const StyledBadge = styled.div`
   display: inline-block;
-  ${({ variant }) => variant[variants]}
+  ${({ variant }) => variants[variant]}
 `
 
 export default StyledBadge
