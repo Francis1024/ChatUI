@@ -1,27 +1,29 @@
 {
-  "name": "chatui",
-  "version": "1.0.0",
+  "name": "ddy-chatui",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "private": false,
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
+  "typings": "build/types/packages/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "types": "build/index.d.ts",
   "scripts": {
     "sb": "start-storybook -p 6006",
     "build": "rimraf build/* && rollup -c",
     "build:sb": "build-storybook -c .storybook -o docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Francis1024/ChatUI.git"
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "3.8.3"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Francis1024/ChatUI/issues"
-  },
-  "homepage": "https://github.com/Francis1024/ChatUI#readme",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "typescript": "^3.8.3"
+    "typescript": "3.8.3"
   },
   "devDependencies": {
     "@types/react": "^16.14.14",

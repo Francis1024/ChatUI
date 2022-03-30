@@ -9,6 +9,7 @@ const { babel } = require("@rollup/plugin-babel");
 const packageJson = require("./package.json");
 const less = require("less");
 
+const name = 'ChatUI';
 const isProd = process.env.NODE_ENV === "production";
 
 const babelOptions = {
@@ -48,16 +49,6 @@ const processLess = function (context, payload) {
 
 export default {
   input: "packages/index.ts",
-  output: [
-    {
-      file: packageJson.main,
-      format: "cjs"
-    },
-    {
-      file: packageJson.module,
-      format: "es"
-    }
-  ],
   plugins: [
     peerDepsExternal({ includeDependencies: !isProd }),
     resolve(),
@@ -69,5 +60,15 @@ export default {
     }),
     babel(babelOptions),
     json()
+  ],
+  output: [
+    {
+      file: packageJson.main,
+      format: "cjs"
+    },
+    {
+      file: packageJson.module,
+      format: "es"
+    }
   ],
 };
