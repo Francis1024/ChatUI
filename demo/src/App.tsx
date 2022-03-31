@@ -1,7 +1,7 @@
 import { useState } from "react";
-import logo from "./logo.svg";
 import { TextView } from "ddy-chatui";
 import "./App.css";
+import logo from "./logo.svg";
 
 function App() {
   const [count, setCount] = useState(0);
