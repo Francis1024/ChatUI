@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TextView } from "ddy-chatui";
 import logo from "./logo.svg";
+import { TextView } from "ddy-chatui";
 import "./App.css";
 
 function App() {
