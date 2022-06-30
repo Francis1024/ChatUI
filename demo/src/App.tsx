@@ -17,6 +17,7 @@ function App() {
           </button>
         </p>
         <TextView>测试</TextView>
+        <TextView>测试1</TextView>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
         </p>

@@ -21,6 +21,7 @@
     "typescript": "3.8.3"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "3.8.3"
